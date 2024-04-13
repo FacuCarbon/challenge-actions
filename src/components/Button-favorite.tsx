@@ -4,8 +4,6 @@ import { useActions } from "../providers/ActionsProvider";
 import { Stock } from "../utils/Types";
 import { validateFavorite } from "../utils/ValidateFavorites";
 
-/// COMPONENTS
-
 /// ICONS
 import { IoIosStarOutline, IoMdStar } from "react-icons/io";
 /// INTERFACES
