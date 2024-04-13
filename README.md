@@ -49,22 +49,20 @@ npm run build
 
 ## Técnologias
 
--React js.
--Vite.
--Typescript.
+- [React js](https://es.react.dev/) - [Vite](https://vitejs.dev/guide/) - [Typescript](https://www.typescriptlang.org/)
 
 ## Librerías
 
-- [Prime react:](https://primereact.org/installation/)
-- [React icons:](https://react-icons.github.io/react-icons/)
-- [Moment:](https://momentjs.com/docs/)
+- [Prime react](https://primereact.org/installation/)
+- [React icons](https://react-icons.github.io/react-icons/)
+- [Moment](https://momentjs.com/docs/)
 
 ## Características
 
--Tabla paginada de acciones.
--Buscador en la tabla para simbolo y nombre.
--Detalle de cada acción con filtros para mejorar el grafico.
--Tiempo real: Busca desde el inicio del día (hoy, a las 00:00:00) hasta el final del día (hoy, a las 23:59:00), se actualiza el grafico dependiendo del tiempo de intervalo seleccionadado.
--Historico: Busca dependiendo de la fecha y hora de inicio seleccionado, hasta la fecha y hora seleccionado para el final del día.
--Favoritos: el usuario podrá seleccionar, gestionar, y almacenar sus stocks favoritos:
-Se almacenan en un estado, y para persistencia en localstorage.
+- Tabla paginada de acciones.
+- Buscador en la tabla para símbolo y nombre.
+- Detalle de cada acción con filtros para mejorar el gráfico.
+- Tiempo real: Busca desde el inicio del día (hoy, a las 00:00:00) hasta el final del día (hoy, a las 23:59:00), se actualiza el gráfico dependiendo del tiempo de intervalo seleccionado.
+- Histórico: Busca dependiendo de la fecha y hora de inicio seleccionado, hasta la fecha y hora seleccionado para el final del día.
+- Favoritos: el usuario podrá seleccionar, gestionar y almacenar sus stocks favoritos:
+  - Se almacenan en un estado, y para persistencia en localstorage.
