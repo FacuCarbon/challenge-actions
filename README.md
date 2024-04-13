@@ -9,7 +9,7 @@ Está aplicación fue compuesta en base a un challenge solicitado, para obtener 
 - [Técnologias](#tecnologias)
 - [Librerías](#librerias)
 - [Características](#características)
-- [Licencia](#licencia)
+- [Autor](#autor)
 
 ## Instalación
 
@@ -66,3 +66,9 @@ npm run build
 - Histórico: Busca dependiendo de la fecha y hora de inicio seleccionado, hasta la fecha y hora seleccionado para el final del día.
 - Favoritos: el usuario podrá seleccionar, gestionar y almacenar sus stocks favoritos:
   - Se almacenan en un estado, y para persistencia en localstorage.
+
+## Autor
+
+## Facundo Carbón
+
+### facundocarbon2015@gmail.com
