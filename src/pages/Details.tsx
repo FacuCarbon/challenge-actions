@@ -94,9 +94,6 @@ const Details = () => {
       dataRequest["start_date"] = currentDate
         ?.startOf("day")
         .format("YYYY-MM-DD HH:mm:ss");
-      dataRequest["end_date"] = currentDate
-        ?.endOf("day")
-        .format("YYYY-MM-DD HH:mm:ss");
     }
 
     setLoading(true);
@@ -110,7 +107,7 @@ const Details = () => {
       } else {
         setLoading(false);
         setErrorRequest(
-          "We do not currently have the information you require."
+          `We do not have data for ${currentStock?.name} at this moment, please try another one.`
         );
       }
     } catch (error) {
