@@ -47,6 +47,12 @@ npm run dev
 npm run build
 ```
 
+5. Generar tu api key
+
+- [Api twelvedat](https://twelvedata.com/)
+
+6. Crear archivo .env con la misma clave que el .env.example que se brinda de configuración.
+
 ## Técnologias
 
 - [React js](https://es.react.dev/) - [Vite](https://vitejs.dev/guide/) - [Typescript](https://www.typescriptlang.org/)
@@ -56,6 +62,7 @@ npm run build
 - [Prime react](https://primereact.org/installation/)
 - [React icons](https://react-icons.github.io/react-icons/)
 - [Moment](https://momentjs.com/docs/)
+- [.highcharts](https://www.highcharts.com/)
 
 ## Características
 
