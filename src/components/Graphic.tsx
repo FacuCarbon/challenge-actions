@@ -1,6 +1,6 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import moment from "moment"; // Importamos Moment.js
+import moment from "moment";
 import { ResponseTimeSerie, ValueTimeSerie } from "../utils/Types";
 
 interface GraphicProps {
@@ -10,10 +10,10 @@ interface GraphicProps {
 const Graphic = ({ data }: GraphicProps) => {
   const seriesDataSorted = data?.values
     ?.sort((a: ValueTimeSerie, b: ValueTimeSerie) => {
-      return moment(a.datetime).valueOf() - moment(b.datetime).valueOf(); // Utilizamos Moment.js para obtener el valor de la fecha y hora en milisegundos
+      return moment(a.datetime).valueOf() - moment(b.datetime).valueOf();
     })
     .map((item: ValueTimeSerie) => ({
-      x: moment(item.datetime).valueOf(), // Convertimos la fecha y hora a milisegundos utilizando Moment.js
+      x: moment(item.datetime).valueOf(), 
       y: parseFloat(item.close),
     }));
 
