@@ -94,6 +94,9 @@ const Details = () => {
       dataRequest["start_date"] = currentDate
         ?.startOf("day")
         .format("YYYY-MM-DD HH:mm:ss");
+      dataRequest["end_date"] = currentDate
+        ?.endOf("day")
+        .format("YYYY-MM-DD HH:mm:ss");
     }
 
     setLoading(true);

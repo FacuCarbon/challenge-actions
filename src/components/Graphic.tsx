@@ -1,5 +1,6 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import moment from "moment"; // Importamos Moment.js
 import { ResponseTimeSerie, ValueTimeSerie } from "../utils/Types";
 
 interface GraphicProps {
@@ -9,40 +10,57 @@ interface GraphicProps {
 const Graphic = ({ data }: GraphicProps) => {
   const seriesDataSorted = data?.values
     ?.sort((a: ValueTimeSerie, b: ValueTimeSerie) => {
-      return new Date(a.datetime).getTime() - new Date(b.datetime).getTime();
+      return moment(a.datetime).valueOf() - moment(b.datetime).valueOf(); // Utilizamos Moment.js para obtener el valor de la fecha y hora en milisegundos
     })
     .map((item: ValueTimeSerie) => ({
-      x: new Date(item.datetime).getTime(),
+      x: moment(item.datetime).valueOf(), // Convertimos la fecha y hora a milisegundos utilizando Moment.js
       y: parseFloat(item.close),
     }));
 
   const options: Highcharts.Options = {
     chart: {
       type: "line",
+      zooming: {
+        type: "x",
+        resetButton: {
+          theme: {
+            fill: "#00bcd4",
+            style: {
+              color: "#ffff",
+              border: "none",
+            },
+          },
+        },
+      },
     },
     title: {
       text: data?.meta?.symbol,
     },
     xAxis: {
       type: "datetime",
-    },
 
+      labels: {
+        formatter: function () {
+          return moment(this.value).format("HH:mm");
+        },
+      },
+    },
     yAxis: {
       title: {
-        text: "Cotización",
+        text: "Quote",
       },
     },
     tooltip: {
       formatter: function () {
-        return `<b>${Highcharts.dateFormat(
-          "%d-%m-%y %H:%M",
-          this.x as number
+        return `<b>${moment(this.x).format(
+          "DD-MM-YY HH:mm"
         )}</b><br/>$${this?.y?.toFixed(2)}`;
       },
     },
+
     series: [
       {
-        name: "Intervalo",
+        name: "Interval",
         data: seriesDataSorted,
         type: "line",
       },
